@@ -1,0 +1,1 @@
+# test-task-graphic-genesis-studio
