@@ -1,0 +1,38 @@
+@import '../../mixins.scss';
+
+.module {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 32px 16px;
+    gap: 1.1rem;
+    cursor: pointer;
+
+    &--active {
+      background-color: var(--active-color);
+      font-weight: 700;
+  
+      & > .module__title {
+        font-weight: 700;
+      }
+    }
+  }
+  &__point {
+    @extend %flex-center;
+    background-color: var(--accent-color);
+    font-size: 1rem;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    margin: 0;
+  }
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--black-color);
+
+    @include onTablet {
+      font-size: 1.3rem;
+    }
+  }
+}

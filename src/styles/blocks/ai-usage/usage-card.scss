@@ -1,0 +1,28 @@
+@import '../../mixins.scss';
+
+.usage-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.3rem;
+  background: radial-gradient(68.63% 463.3% at 100% 100%, #504740 0%, #5C4359 16.36%, #382B3F 42.19%, #171717 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border-radius: 20px;
+  padding: 40px 20px;
+
+  @include onTablet {
+    gap: 2.8rem;
+    padding: 40px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__heading {
+    font-size: 1.3rem;
+
+    @include onTablet {
+      font-size: 1.8rem;
+    }
+  }
+}

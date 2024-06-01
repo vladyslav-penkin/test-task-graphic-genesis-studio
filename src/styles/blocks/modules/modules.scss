@@ -1,0 +1,21 @@
+@import '../../mixins.scss';
+
+.modules {
+  background-color: var(--primary-color);
+  padding: 100px 0;
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @include onDesktop {
+      flex-direction: row;
+    }
+  }
+
+  &__courses {
+    border: 1px solid var(--secondary-color);
+    width: 100%;
+  }
+}

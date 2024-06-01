@@ -1,0 +1,14 @@
+.employment-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.45rem;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

@@ -1,0 +1,78 @@
+@import '../../mixins.scss';
+
+.course {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 60px 24px;
+  border-radius: 32px;
+  background-color: var(--card-color);
+  background: url(../../../assets/images/course-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  @include onTablet {
+    padding: 80px 52px;
+    gap: 3.5rem;
+  }
+  @include onDesktop {
+    padding: 80px 104px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+
+    @include onTablet {
+      font-size: 4rem;
+    }
+  }
+
+  &__group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.7rem;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.7rem;
+      padding: 60px 38px;
+      background-color: var(--card-color);
+      border-radius: 32px;
+
+      @include onTablet {
+        padding: 60px 16px;
+      }
+      @include onDesktop {
+        padding: 40px 18px;
+      }
+    }
+
+    &-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    &-title {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    &-description {
+      text-align: center;
+    }
+  }
+}

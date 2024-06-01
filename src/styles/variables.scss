@@ -1,0 +1,31 @@
+@import './mixins.scss';
+
+:root {
+  --burger-icon-size: 34px;
+  --header-size: 66px;
+
+  @include onTablet {
+    --header-size: 83px;
+  }
+
+  @include onDesktop {
+    --header-size: 85px;
+  }
+
+  --bg-color: #121212;
+  --primary-color: #FFFFFF;
+  --black-color: #000000;
+  --dark-color: #2A2A2A;
+  --secondary-color: #D7D7D7;
+  --accent-color: #8B57C2;
+  --pink-color: #EF85EC;
+  --active-color: #E7DAF5;
+  --elements-color: #4B4B4B;
+  --border-color: #969696;
+  --input-color: #F5F5F5;
+  --pagination-color: #AFAFAF;
+  --rights-color: #D7D7D7;
+  --faq-color: #353535;
+  --faq-bg-color: #212121;
+  --card-color: #18171DB2;
+}

@@ -1,0 +1,145 @@
+@import '../../mixins.scss';
+
+.form {
+  position: relative;
+  @extend %flex-center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  padding: 60px 20px;
+  width: 100%;
+
+  &__title {
+    font-size: 1.45rem;
+    color: var(--black-color);
+    max-width: 180px;
+    text-align: center;
+
+    @include onTablet {
+      max-width: 236px;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__description {
+    color: var(--black-color);
+    max-width: 236px;
+    text-align: center;
+
+    @include onTablet {
+      max-width: 400px;
+      font-size: 1.45rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    @include onTablet {
+      min-width: 400px;
+    }
+  }
+
+  &__phone {
+    position: relative;
+  }
+
+  &__tel {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0%, -50%);
+  }
+
+  &__input {
+    background-color: var(--input-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 16px 32px;
+    width: 100%;
+
+    &.form__input--tel {
+      padding: 16px 32px 16px 70px;
+    }
+
+    &::placeholder {
+      color: var(--black-color);
+    }
+  }
+
+  &__button {
+    outline: 0;
+    border: none;
+    margin: 1.1rem 0 0 0;
+    color: var(--primary-color);
+    border-radius: 10px;
+    min-width: 237px;
+    min-width: 47px;
+    padding: 12px 44px;
+    background-color: var(--accent-color);
+    transition: opacity .3s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__availability {
+    text-align: center;
+    color: var(--border-color);
+  }
+
+  &__disclaimer {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 300;
+    color: var(--border-color);
+    max-width: 319px;
+  }
+
+  &__image-container {
+    position: absolute;
+    @extend %flex-center;
+    top: 0;
+    right: 0;
+  }
+
+  &__discount {
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    @extend %flex-center;
+
+    @include onTablet {
+      top: -40px;
+      right: -55px;
+    }
+
+    &-background {
+      position: relative;
+      width: 134px;
+
+      @include onTablet {
+        width: 197px;
+      }
+    }
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 64px;
+
+      @include onTablet {
+        width: 93px;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import '../../mixins.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    @include onLaptop {
+      max-width: 1400px;
+    }
+  }
+
+  &__logo {
+    width: 64px;
+
+    @include onTablet {
+      width: 84px;
+    }
+  }
+
+  &__button {
+    min-width: 168px;
+    min-height: 42px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 12px 44px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color .3s ease, color .3s ease;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+    }
+
+    &--tablet {
+      display: none;
+
+      @include onTablet {
+        display: block;
+      }
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: block;
+
+      @include onTablet {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+  }
+}
+
+.nav {
+  display: none;
+
+  @include onDesktop {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2.8rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+}

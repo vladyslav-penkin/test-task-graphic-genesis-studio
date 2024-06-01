@@ -1,0 +1,88 @@
+@import '../../mixins.scss';
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2.85rem;
+  background: radial-gradient(100% 586.65% at 0% 100%, #504740 0%, #5C4359 16.36%, #382B3F 42.19%, #171717 100%);
+  padding: 60px 20px;
+  border-radius: 20px;
+
+  @include onTablet {
+    padding: 80px 40px;
+    gap: 4.3rem;
+  }
+  @include onDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 104px 80px;
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include onTablet {
+      gap: 2.8rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+
+    @include onTablet {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+
+    @include onTablet {
+      font-size: 1.45rem;
+      gap: 2rem;
+    }
+
+    &--advantage {
+      align-items: center;
+      font-size: 1rem;
+    }
+  }
+
+  &__icon {
+    width: max-content;
+    height: max-content;
+
+    &--advantage {
+      width: 48px;
+      height: 48px;
+
+      @include onTablet {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+  }
+  
+  &__usage {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 400px;
+  }
+
+  &__algorithms {
+    font-size: 1.2rem;
+    @include onTablet {
+      font-size: 1.45rem;
+    }
+  }
+}

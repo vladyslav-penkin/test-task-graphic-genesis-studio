@@ -1,0 +1,36 @@
+@import '../../mixins.scss';
+
+.benefits-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+
+  @include onTablet {
+    font-size: 1.45rem;
+    gap: 2rem;
+  }
+
+  &--advantage {
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  &__icon {
+    width: max-content;
+    height: max-content;
+
+    &--advantage {
+      width: 48px;
+      height: 48px;
+
+      @include onTablet {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+  }
+}

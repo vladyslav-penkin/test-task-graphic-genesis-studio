@@ -1,0 +1,83 @@
+@import '../../mixins.scss';
+
+.main {
+  &__ai-info {
+    margin: 40px 0 100px 0;
+
+    @include onTablet {
+      margin: 40px 0 120px 0;
+    }
+  }
+  &__benefits {
+    margin: 0 0 100px 0;
+  }
+  &__course {
+    margin: 0 0 100px 0;
+  }
+  &__training {
+    margin: 0 0 100px 0;
+
+    @include onTablet {
+      margin: 0 0 90px 0;
+    }
+    @include onDesktop {
+      margin: 0 0 120px 0;
+    }
+  }
+  
+  &__course-details {
+    padding: 100px 0;
+  }
+
+  &__studying {
+    margin: 100px 0;
+
+    @include onTablet {
+      margin: 120px 0;
+    }
+  }
+
+  &__ai-applications {
+    margin: 100px 0;
+
+    @include onTablet {
+      margin: 120px 0;
+    }
+  }
+
+  &__programs-participants {
+    margin: 100px 0;
+
+    @include onTablet {
+      margin: 120px 0;
+    }
+  }
+
+  &__course-form {
+    margin: 60px 0;
+
+    @include onTablet {
+      margin: 120px 0;
+    }
+  }
+
+  &__feedbacks {
+    margin: 100px 0;
+
+    @include onTablet {
+      margin: 120px 0;
+    }
+  }
+
+  &__faq {
+    margin: 100px 0 0 0;
+
+    @include onTablet {
+      margin: 120px 0 0 0;
+    }
+  }
+}
+
+.highlight {
+  color: var(--accent-color);
+}

@@ -1,0 +1,107 @@
+@import '../../mixins.scss';
+
+.course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  @include onDesktop {
+    flex-direction: row;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__information {
+    @extend %flex-center;
+    gap: 1rem;
+
+    @include onDesktop {
+      justify-content: flex-start;
+    }
+  }
+
+  &__title {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top: 1.45rem;
+    text-transform: uppercase;
+
+    @include onTablet {
+      font-size: 3.1rem;
+    }
+    @include onDesktop {
+      text-align: start;
+    }
+  }
+
+  &__intro {
+    font-weight: 700;
+    font-size: 1.45rem;
+    text-align: center;
+    margin-top: 1.1rem;
+
+    @include onTablet {
+      font-size: 1.8rem;
+    }
+    @include onDesktop {
+      text-align: start;
+    }
+  }
+
+  &__description {
+    font-size: 1.45rem;
+    text-align: center;
+    margin-top: 3.5rem;
+    @include onDesktop {
+      text-align: start;
+    }
+  }
+
+  &__price {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-align: center;
+    @include onDesktop {
+      text-align: start;
+    }
+  }
+
+  &__timers {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    @include onDesktop {
+      justify-content: flex-start
+    }
+  }
+
+  &__timer {
+    @extend %flex-center;
+    flex-direction: column;
+    background-color: var(--input-color);
+    color: var(--black-color);
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 60px;
+    max-height: 64px;
+    
+    @include onTablet {
+      width: 88px;
+    }
+  }
+
+  &__time {
+    font-weight: 700;
+    @include onTablet {
+      font-size: 1.45rem;
+    }
+  }
+
+  &__label {
+    font-size: .9rem;
+  }
+}

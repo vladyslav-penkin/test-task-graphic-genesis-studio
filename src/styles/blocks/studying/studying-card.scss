@@ -1,0 +1,67 @@
+@import '../../mixins.scss';
+
+.studying-card {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  & h4, p {
+    margin: 0;
+  } 
+
+  @include onTablet {
+    align-items: center;
+  }
+
+  @include onDesktop {
+    flex-direction: column;
+
+    & h4, p {
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    z-index: 2;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      background-color: var(--dark-color);
+      color: var(--primary-color);
+      font-size: 1rem;
+      border-radius: 50px;
+      z-index: 3;
+    }
+
+    @include onTablet {
+      width: 130px;
+      height: 120px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    max-width: 375px;
+
+    @include onDesktop {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 1.1rem;
+  }
+
+  &__description {
+    font-size: .9rem;
+  }
+}

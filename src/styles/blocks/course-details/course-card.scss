@@ -1,0 +1,46 @@
+@import '../../mixins.scss';
+
+.course-card {
+  background: radial-gradient(100% 586.65% at 0% 100%, #504740 0%, #5C4359 16.36%, #382B3F 42.19%, #171717 100%);
+  display: flex;
+  gap: 1.2rem;
+  padding: 40px 20px;
+  border-radius: 20px;
+
+  @include onTablet {
+    gap: 2.2rem;
+    padding: 40px;
+  }
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 320px;
+  }
+
+  &__title {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+
+    @include onTablet {
+      font-size: 1.45rem;
+    }
+  }
+
+  &__description {
+    font-size: .9rem;
+    margin: 0;
+
+    @include onTablet {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin onMobile {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onLaptop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

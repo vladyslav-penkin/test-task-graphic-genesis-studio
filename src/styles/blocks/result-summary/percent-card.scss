@@ -1,0 +1,26 @@
+.percent-card {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  &__percent {
+    font-size: 1.45rem;
+    padding: 13px 5px;
+    height: min-content;
+    border-radius: 10px;
+
+    background-color: var(--accent-color);
+    &--teorogy {
+      color: var(--black-color);
+      background-color: var(--pink-color);
+    }
+    &--feedback {
+      color: var(--black-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  &__title {
+    font-size: 1.1rem;
+  }
+}

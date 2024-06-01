@@ -1,0 +1,92 @@
+@import '../../mixins.scss';
+
+.module-details {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 1.45rem;
+  padding: 20px 20px 34px 20px;
+  color: var(--black-color);
+  border: 1px solid var(--secondary-color);
+
+  @include onDesktop {
+    display: flex;
+  }
+
+  &--mobile {
+    display: flex;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include onTablet {
+      display: inline;
+    }
+  }
+
+  &__points {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+
+    @include onTablet {
+      gap: 1.45rem;
+    }
+  }
+
+  &__point {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-color);
+    }
+  
+    &-title {
+      margin: 0;
+    }
+  }
+
+  &__results {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    &-title {
+      font-weight: 700;
+    }
+
+    &-description {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  &__button {
+    padding: 12px 44px;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+    &:active {
+      opacity: .5;
+    }
+
+    @include onTablet {
+      width: max-content;
+    }
+  }
+}

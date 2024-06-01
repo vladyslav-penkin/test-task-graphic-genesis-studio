@@ -1,0 +1,24 @@
+@import '../../mixins.scss';
+
+.information {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+
+  &--hidden {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+    }
+  }
+
+  &__title {
+    font-size: .9rem;
+    width: max-content;
+
+    @include onTablet {
+      font-size: 1rem;
+    }
+  }
+}

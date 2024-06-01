@@ -1,0 +1,45 @@
+@import '../../mixins.scss';
+
+.ai-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include onDesktop {
+    flex-direction: row-reverse;
+  }
+
+  &__content {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  &__title {
+    font-size: 2rem;
+
+    @include onTablet {
+      font-size: 3.1rem;
+    }
+  }
+  &__question {
+    font-size: 1.55rem;
+
+    @include onTablet {
+      font-size: 2rem;
+    }
+  }
+  &__description {
+
+    @include onTablet {
+      font-size: 1.5rem;
+    }
+  }
+  &__image {
+    flex-basis: 50%;
+    margin: 40px 0 0 0;
+    width: 100%;
+    height: max-content;
+  }
+}

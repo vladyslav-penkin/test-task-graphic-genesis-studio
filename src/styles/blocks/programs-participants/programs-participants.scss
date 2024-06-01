@@ -1,0 +1,51 @@
+@import '../../mixins.scss';
+
+.programs-participants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+
+  & > h2, & > p {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+
+    @include onTablet {
+      font-size: 4rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.1rem;
+
+    @include onTablet {
+      font-size: 1.45rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.45rem;
+    max-width: 314px;
+
+    @include onTablet {
+      max-width: 604px;
+    }
+
+    @include onDesktop {
+      max-width: 100%;
+    }
+  }
+
+  &__particiant {
+    max-width: 145px;
+    max-height: 74px;
+  }
+}
